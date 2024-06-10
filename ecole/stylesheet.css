@@ -1,0 +1,220 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family:'Calibri', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#main_header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.253),rgba(0, 0, 0, 0.246)), url(ressources/img/bg_1.jpg);
+    background-position: top center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: max-content;
+    width: 100vw; 
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+}
+
+#top_nav{
+    margin-top: 1rem;
+    z-index: 2;
+    width: 100vw;
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content:space-around;
+}
+
+#humburgerCheckbox{
+    display: none;
+}
+
+#top_nav label{
+    display: none;
+    color: white;
+}
+
+#title{
+    text-decoration: none;
+    color: rgb(255, 254, 238);
+    font-size: 2rem;
+    height: max-content;
+    padding: 0.5rem;
+    transition: all 200ms ease-in-out;
+}
+#title h1{
+    margin: 0;
+}
+#title:hover{
+    transform: scale(1.1);
+}
+
+#side_nav{
+    display: flex;
+    flex-flow: row nowrap;
+}
+#side_nav a{
+    text-decoration: none;
+    padding: 2rem 2rem;
+    font-size: 1.5rem;
+    color: rgb(255, 254, 238);
+    border-radius: 1rem;
+    transition: all 250ms ease-in-out;
+}
+
+#side_nav a:hover, #side_nav a:focus{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+#side_nav a:active{
+    background-color: rgba(45, 76, 8, 0.9);
+}
+
+#intro{
+    color: white;
+    width: 50%;
+    z-index: 3;
+    font-size: 2rem;
+    margin-bottom: 30vh;
+}
+#intro h2{font-size: 5.5rem;}
+#intro p{margin-right: 3rem; margin-bottom: 5rem;}
+#intro a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(22, 22, 22);
+    padding: 1.3rem 1.5rem;
+    border: 4px solid black;
+    transition: all 200ms ease-in-out;
+}
+#intro a:hover{
+    background-color: rgb(84, 33, 33);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    z-index: 10;
+    margin-top: -12vh;
+}
+
+#info a{
+    width: 25%;
+    background-color: white;
+    height: 25rem;
+    text-decoration: none;
+}
+
+#info .impaire{
+    background-color: rgb(227, 227, 227);
+}
+
+#info a:hover figure div img{
+    transform: scale(1.7);
+}
+#info a:hover figure{
+    background-color: red;
+}
+
+#info a figure{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms ease-in-out;
+}
+#info a figure div{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info a figure div img{
+    transform: scale(1.5);
+    transition: all 250ms ease-in-out;
+}
+
+#info .impaire figure div{
+    background-color: white;
+}
+#info figcaption{
+    margin-top: 1rem;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem
+}
+#info figcaption strong{
+    font-size: 2.5rem;
+}
+
+
+@media screen and (max-width:1440px) {
+    #top_nav label{
+        display: block;
+        margin: 1rem;
+    }
+    #top_nav{
+        background-color: black;
+        margin-top: 0;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        transition: all 300ms ease-in-out;
+    }
+    #top_nav #side_nav{
+        display: none;
+        position: relative;
+        width: 100%;
+        flex-flow: column nowrap;
+        transition: all 200ms ease-in-out;
+    }
+    
+    #top_nav input:checked ~ #side_nav{
+        display: flex;
+    }
+    #main_header{
+        align-items: center;
+    }
+    #intro{
+        width: 90vw;
+    }
+    #info{
+        flex-flow: column nowrap;
+    }
+    #info a{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:720px){
+    #title h1{
+        font-size: 1.5rem;
+    }
+    #intro h2{
+        font-size: 2.5rem;
+    }
+    #intro{
+        width: 80vw;
+        font-size: 1.5rem;
+    }
+    #intro p{
+        margin-right: 0;
+    }
+    #intro a{
+        font-size: 1rem;
+    }
+}

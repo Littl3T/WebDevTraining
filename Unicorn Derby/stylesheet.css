@@ -1,0 +1,150 @@
+@font-face {
+    font-family:'MermaidBabies';
+    src: url(fonts/MermaidBabies.otf);
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial',sans-serif;
+}
+
+#top_header{
+    background-color: #4c9ba4;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+#top_header a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    font-family: 'MermaidBabies','Arial',sans-serif;
+    margin: 0 1.5rem;
+}
+
+#top_header a:hover{
+    color: #ffccff;
+}
+
+#top_header #title{
+    font-size: 1.3rem;
+}
+#title h1{
+    margin: -1rem 0;
+}
+
+#top_nav{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#background{
+    height: 100vh;
+    background-image: url(img/Unicorns.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Homepage{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#licornes{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.lico{
+    width: 15vw;
+}
+
+.lico img{
+    width: 100%;
+    border-radius: 1rem;
+}
+.lico figcaption ul{
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.lico figcaption h2{
+    font-family:'MermaidBabies','Arial',sans-serif;
+    color: #4c9ba4;
+    font-size: 2rem;
+    text-align: center;
+    margin: -1rem 0;
+    padding: 0;
+}
+
+@media screen and (max-width:1024px) {
+
+    #background{
+        height: max-content;
+        background-image: none;
+    }
+
+    #Homepage{
+        background-image: url(img/Unicorns.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size:1000px;
+    }
+
+    #top_header{
+        flex-flow: column nowrap;
+    }
+
+    #licornes{
+        margin-top: 5rem;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .lico{
+        width: 50%;
+        margin-bottom: 4rem;
+    }
+
+    .lico figcaption ul{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    #top_nav{
+        flex-flow: column nowrap;
+        width: 100%;
+        text-align: center;
+    }
+    #top_nav a{
+        margin: 0;
+    }
+    #title{
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+    #title h1{
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .lico figcaption ul{
+        font-size: 0.8rem;
+    }
+
+    .lico figcaption h2{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+}

@@ -1,0 +1,157 @@
+@font-face {
+	font-family:'icecreamsoda';
+	src: url(fonts/icecreamsoda.ttf);
+}
+
+body,html{
+	margin: 0;
+	padding: 0;
+	font-family: Arial,sans-serif;
+}
+
+#top_header{
+	background-color: #00eeff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#top_header a{
+	text-decoration: none;
+	color: black;
+	font-family:'icecreamsoda','Arial',sans-serif;
+	text-underline-offset: 8px;
+	transition: all 300ms ease-in-out;
+}
+
+#top_header a:hover{
+	text-decoration: underline 2px;
+}
+
+#top_header h1{
+	font-size: 4.5rem;
+	margin: 1rem 0;
+	font-weight: 100 ;
+	margin-left: 7vw;
+}
+
+#top_nav{
+	display: flex;
+	flex-flow: row nowrap;
+	margin-right: 7vw;
+}
+
+#top_nav a{
+	font-size: 3.5rem;
+	margin: 0 2.5rem;
+}
+
+#HomePage{
+	background-image: url(img/background.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+#frigos{
+	padding-top: 3rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.fig_frigo{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	color: white;
+	font-size: 1.3rem;
+	width: 35%;
+	margin: 6rem 2rem;
+}
+
+.fig_frigo img{
+	width: 33%;
+}
+
+.fig_frigo figcaption{
+	margin: 0 1rem;
+}
+
+.fig_frigo figcaption p{
+	margin: 0;
+	font-size: 1.5rem ;
+}
+
+.fig_frigo figcaption h2{
+	margin: 0;
+	font-family:'icecreamsoda','Arial',sans-serif;
+	font-size: 4.5rem;
+	color: #00eeff;
+	font-weight: 100;
+}
+
+@media screen and (max-width:1300px) {
+	#frigos{
+		flex-flow: column nowrap;
+		align-items: center;
+		background-image: url(img/background.jpg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.fig_frigo{
+		width: 90%;
+	}
+	
+	#HomePage{
+		background: none;
+		height: max-content;
+	}
+	#top_header h1{
+		margin: 1.5rem 0;
+	}
+	#top_nav{
+		margin: 0;
+	}
+}
+
+@media screen and (max-width:920px){
+	#top_header{
+		flex-flow: column nowrap;
+	}
+}
+
+@media screen and (max-width:680px) {
+	#top_nav{
+		flex-flow: column nowrap;
+		text-align: center;
+		width: 100%;
+	}
+
+	#top_header a{
+		margin: 0;
+		padding: 1rem 0;
+		width: 100%;
+		font-size: 4rem;
+	}
+
+	#top_header h1{
+		margin: 2rem 0 3rem;
+		text-align: center;
+		font-size: 5rem;
+	}
+
+	.fig_frigo{
+		margin: 2rem 0;
+	}
+	
+	.fig_frigo figcaption p{
+		font-size: 1rem;
+	}
+
+	.fig_frigo figcaption h2{
+		font-size: 3rem;
+	}
+}

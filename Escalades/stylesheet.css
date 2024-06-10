@@ -1,0 +1,110 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibri';
+}
+
+#main_header{
+    width: 100%;
+    height: max-content;
+    background-color: #69615e;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#top_nav{
+    display: flex;
+    flex-flow:row nowrap;
+    width: 45%;
+    justify-content: space-between;
+    align-items: center;
+}
+#main_header a img{
+    width: 15rem;
+    margin: 0;
+    margin-right: 5vw;
+    transition: all 250ms ease-in-out;
+}
+#main_header a img:hover{
+    transform: scale(1.05);
+}
+#top_nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    margin: 1rem;
+    transition: all 250ms ease-in-out;
+}
+#top_nav a:hover{
+    color: #00fd97;
+}
+
+main{
+    margin: 0;
+    margin-top: -90px;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#informations{
+    margin: 0;
+    color: white;
+    font-size: 1.8rem;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 60vw;
+    text-shadow: 3px 3px 4px black;
+}
+#informations h1{
+    margin: 0;
+    font-size: 4.5rem;
+    font-weight: 500;
+}
+#ligne{
+    width: 100%;
+    height: 0.5rem;
+    background-color: #00fd97;
+    box-shadow: 1px 1px 2px black;
+}
+#informations p a{
+    text-decoration: none;
+    color: #00fd97;
+    text-shadow: 3px 3px 3px black;
+}
+
+@media screen and (max-width:1024px) {
+    #main_header{
+        height: max-content;
+        flex-flow: column-reverse nowrap;
+    }
+    #top_nav{
+        margin-top: 2rem;
+        flex-flow: column nowrap;
+        height: 100%;
+    }
+    #main_header a img{
+        margin: 0;
+        margin-top: 2rem;
+    }
+    main{
+        margin-top: -120px;
+        height: max-content;
+    }
+    #informations{
+        margin-top: 15vh;
+        width: 75vw;
+    }
+}
+
+@media screen and (max-width:440px) {
+    #informations h1{
+        font-size: 3rem;
+    }    
+}

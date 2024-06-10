@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'VictorianDecade';
+    src: url(fonts/VictorianDecade.otf);
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibri',sans-serif;
+}
+
+#top_header{
+    background-color: #312332;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+}
+
+#top_header a{
+    font-family: 'victorianDecade','Arial',sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+    margin: 0.5rem 1rem;
+    padding: 1rem 1.5rem;
+    transition: all 250ms ease-in-out;
+}
+
+#top_header a:hover,#top_header a:focus {
+    background-color: black;
+    color: #fe2e23;
+}
+
+#top_nav{
+    display: flex;
+}
+
+#title h1{
+    font-size: 3.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+#HomePage{
+    background-image: url(img/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#information{
+    width: 28vw;
+    text-align: end;
+    color: white;
+    font-size: 1.5rem;
+    margin: 5rem;
+}
+
+#information .big{
+    margin: 0;
+    font-size: 5rem;
+    font-weight: 100;
+    font-family: 'victorianDecade','Arial',sans-serif;
+}
+
+@media screen and (max-width:1140px) {
+    #top_header{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    #top_nav{
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1.5rem
+    }
+    #top_nav a{
+        width: 100%;
+    }
+    #top_header a{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 1rem 0;
+    }
+    a#title{
+        margin: 0 0 1rem 0;
+        padding: 2rem 0;
+    }
+
+    #HomePage{
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    #information{
+        width: 75vw;
+        text-align: start;
+        margin: 0;
+    }
+    #information .big{
+        font-size: 3.5rem;
+    }
+}
